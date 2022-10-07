@@ -14,8 +14,10 @@ def buscarContacto(nombre):
         encontrado = False
         for i in range(len(misContactos)):
             if misContactos[i].verNombre() == nombre:
-                print("EL teléfono es ", misContactos[i].verNumero())
-                print("La dirección es ", misContactos[i].verDireccion())
+                print("----------------------------")
+                print("El teléfono es.: ", misContactos[i].verNumero())
+                print("La dirección es: ", misContactos[i].verDireccion(),)
+                print("----------------------------")
                 encontrado = True
                 break
             else:
@@ -28,7 +30,7 @@ def mostrarContactos():
         print("La lista esta vacía, no hay contactos que buscar...")
     else:
         for i in range(len(misContactos)):
-            print('Nombre: ', misContactos[i].verNombre(), ' Dirección', misContactos[i].verDireccion(), ' Teléfono', misContactos[i].verNumero())
+            print('Nombre: ', misContactos[i].verNombre(), ' - ', 'Dirección', misContactos[i].verDireccion(), ' - ', 'Teléfono', misContactos[i].verNumero())
 
 def modificarContacto(nombre):
     if len(misContactos) == 0:
@@ -102,7 +104,7 @@ def crearReporte():
 def main():
     op = 0
     while op != 7:
-        print("+--------------------------+")
+        print("\n+--------------------------+")
         print("|       Agenda 2022        |")
         print("|--------------------------|")
         print("| 1. Crear contacto        |")
